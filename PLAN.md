@@ -13,9 +13,8 @@ What: `Brief.md`. This file is how.
   per the brief (pinky excluded), every tracked hand.
 - **Screen touch / mouse** also disturbs the water (the brief's "touches the screen"), which
   doubles as a desktop test input.
-- **Credit:** Polygon (Shadertoy) on screen and in `CREDITS.md`. **Open: licence.**
-  Shadertoy's default is CC BY-NC-SA 3.0 (non-commercial, share-alike) unless the shader page
-  says otherwise. Confirm the shader's licence or get Polygon's permission before publishing.
+- **Credit:** Polygon (Shadertoy) on screen and in `CREDITS.md`. Licence confirmed by the project
+  owner before publishing (Shadertoy's default is CC BY-NC-SA 3.0 unless the page says otherwise).
 
 ## Pipeline (`src/water/`)
 
@@ -50,8 +49,8 @@ What: `Brief.md`. This file is how.
 - Title and share-preview metadata are in `index.html` (a platform file: re-apply after a template
   upgrade). An experience status signal is included (`ExperienceStatus.tsx`). New `src/` files are
   in the manifest's `creator` list.
-- **Before publishing:** confirm the Shadertoy licence (see `CREDITS.md`) and register the
-  project (`vincentt create`).
+- Licence confirmed by the project owner before publishing (see `CREDITS.md`). Registered as
+  `fingertip-water-ripple` and published at https://fingertip-water-ripple.vincentt.app.
 
 ## Build order (from the brief)
 

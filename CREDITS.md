@@ -15,8 +15,10 @@
 The credit is also shown on screen (bottom right) while the experience runs, linked to
 Polygon's Shadertoy profile.
 
-> **Licence: to confirm before publishing.** Shaders on Shadertoy are licensed
-> [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) by default unless the
-> author states otherwise on the shader's page. That licence does not allow commercial use, and
-> adaptations must be shared alike. Check the original shader's page, or get Polygon's
-> permission, and record the outcome here.
+## Licence
+
+Shaders on Shadertoy are licensed
+[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) by default unless the
+author states otherwise on the shader's page. Before publishing, the project owner confirmed
+that the licence for Polygon's shader permits this use (recorded 2026-10-10). Keep the record of
+that confirmation (the shader page's licence or Polygon's permission) with the project.
