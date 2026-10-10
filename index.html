@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/index.css" rel="stylesheet" />
+    <script>
+      // Resolve theme before first paint to avoid flash.
+      // Priority: ?theme=light|dark URL param → system preference.
+      (function () {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var override = params.get("theme");
+          var resolved =
+            override === "light" || override === "dark"
+              ? override
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.dataset.theme = resolved;
+          document.documentElement.classList.toggle(
+            "dark",
+            resolved === "dark",
+          );
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tracking files come from here. They are not preloaded: on a slow link a
+         multi-megabyte preload competes with the scripts the first paint needs. -->
+    <link rel="preconnect" href="https://cdn.vincentt.studio" crossorigin />
+
+    <title>Fingertip Water Ripple</title>
+    <meta name="description" content="Your fingertips disturb an invisible layer of water between you and the camera. Move a straight finger and watch your world ripple — right in your browser." />
+    <meta name="theme-color" content="#04121a" />
+    <link rel="canonical" href="https://fingertip-water-ripple.vincentt.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vincentt" />
+    <meta property="og:title" content="Fingertip Water Ripple" />
+    <meta property="og:url" content="https://fingertip-water-ripple.vincentt.app/" />
+    <meta property="og:description" content="Your fingertips disturb an invisible layer of water between you and the camera. Move a straight finger and watch your world ripple — right in your browser." />
+    <meta property="og:image" content="https://fingertip-water-ripple.vincentt.app/images/og-default.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fingertip Water Ripple — a hand-tracking experience built with Vincentt" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fingertip Water Ripple" />
+    <meta name="twitter:description" content="Your fingertips disturb an invisible layer of water between you and the camera. Move a straight finger and watch your world ripple — right in your browser." />
+    <meta name="twitter:image" content="https://fingertip-water-ripple.vincentt.app/images/og-default.jpg" />
+    <meta name="twitter:image:alt" content="Fingertip Water Ripple — a hand-tracking experience built with Vincentt" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
